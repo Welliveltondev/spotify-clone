@@ -5,7 +5,7 @@ import { playerContext } from '../context/PlayerContext'
 const Player = () => {
   const {seekSong, seekBar, seekBg,playStatus,play,pause, track, time, previous, next } = useContext(playerContext)
 
-  return (
+  return track ? (
     <div className='h-[10%] bg-black justify-between items-center text-white px-4'>
       <div className='hidden lg:flex items-center gap-4'>
         <div className=''>
@@ -48,7 +48,7 @@ const Player = () => {
         </div>
       </div>
     </div>
-  )
+  ): null
 }
 
 export default Player
